@@ -155,3 +155,94 @@ body {
         margin: 0 10px;
     }
 }
+
+
+
+.sobre-nos {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.texto-sobre h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.texto-sobre p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+.precos-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f0f2f5;
+}
+
+.precos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.tabela-preco {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    border: 1px solid #ddd;
+    box-shadow: var(--shadow);
+}
+
+.tabela-preco.destaque {
+    border: 3px solid var(--accent);
+    transform: scale(1.05);
+}
+
+.valor {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 15px 0;
+}
+
+.tabela-preco ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.tabela-preco li {
+    margin-bottom: 10px;
+}
+
+/* FAQ */
+.faq {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pergunta {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary);
+}
+
+.pergunta h4 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* Ajuste na logo do footer */
+.footer-logo {
+    width: 100px;
+    vertical-align: middle;
+}
