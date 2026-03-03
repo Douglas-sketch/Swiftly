@@ -1,110 +1,84 @@
-/* 1. VARIÁVEIS E CONFIGURAÇÕES GERAIS */
+/* CONFIGURAÇÕES GERAIS */
 :root {
-    --primary: #1a365d;       /* Azul Escuro (Confiança) */
-    --accent: #adff2f;        /* Verde Limão (Destaque/Ação) */
-    --bg-light: #f0f2f5;      /* Fundo Cinza Claro */
-    --text-dark: #2d3748;     /* Cor do Texto Principal */
-    --text-light: #ffffff;    /* Cor do Texto no Fundo Escuro */
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary: #1a365d;
+    --accent: #adff2f;
+    --bg-light: #f0f2f5;
+    --text-dark: #2d3748;
+    --text-light: #ffffff;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-light);
     color: var(--text-dark);
+    margin: 0;
     line-height: 1.6;
 }
 
-/* 2. CABEÇALHO (HERO) */
+/* HEADER */
 .hero-header {
-    background: linear-gradient(135deg, var(--primary) 0%, #00126a 100%);
-    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary) 0%, #0a192f 100%);
+    color: white;
+    padding: 60px 20px;
     text-align: center;
-    color: var(--text-light);
 }
 
-.hero-header h1 {
-    color: #ff5e5e; /* Cor de destaque para oferta */
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-/* 3. SEÇÃO SOBRE NÓS */
+/* SOBRE */
 .sobre-nos {
-    padding: 60px 20px;
-    background-color: white;
+    padding: 50px 20px;
     text-align: center;
+    background: white;
 }
 
-.texto-sobre {
-    max-width: 800px;
-    margin: 0 auto;
+.destaque-problema {
+    background: #000;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
 }
 
-/* 4. CARDS DE DIFERENCIAIS */
+/* CARDS DE SOLUÇÃO */
 .services-section {
-    background-color: var(--primary);
     padding: 60px 20px;
-    color: var(--text-light);
     text-align: center;
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
-    margin: 40px auto 0;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    transition: var(--transition);
-}
-
-.card:hover {
-    background: white;
-    color: var(--text-dark);
-    transform: translateY(-10px);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-/* 5. TABELA DE PREÇOS */
-.precos-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.precos-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* PLANOS DE PREÇO */
+.precos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
 }
 
 .tabela-preco {
     background: white;
     padding: 30px;
     border-radius: 15px;
-    width: 280px;
-    box-shadow: var(--shadow);
-    border: 1px solid #eee;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .tabela-preco.destaque {
@@ -112,115 +86,45 @@ body {
     transform: scale(1.05);
 }
 
-.valor {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary);
-}
-
-/* 6. GALERIA DE FOTOS */
-.galeria-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
-    margin: 30px auto;
-}
-
-.foto-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
-    border-radius: 10px;
-}
-
-/* 7. FORMULÁRIO DE CONTATO */
-.contato-section {
-    padding: 60px 20px;
-    background-color: #fff;
-}
-
+/* FORMULÁRIO */
 .contato-container {
     max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.form-contato {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .campo {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
     text-align: left;
 }
 
-.campo input, .campo textarea {
-    padding: 10px;
+input, textarea {
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-radius: 8px;
+    margin-top: 8px;
 }
 
-/* 8. BOTÃO PRINCIPAL */
-.btn-primary {
-    background-color: white;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    padding: 15px 30px;
-    font-weight: bold;
+.btn-enviar {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px;
+    border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: var(--transition);
+    font-weight: bold;
+    width: 100%;
 }
 
-.btn-primary:hover {
-    background-color: var(--accent);
-    border-color: var(--accent);
-}
-
-/* 9. RODAPÉ */
+/* RODAPÉ */
 .footer-modern {
-    background-color: #111;
+    background: #111;
     color: #888;
-    padding: 40px 20px;
-    margin-top: 50px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-logo {
-    width: 120px;
-    vertical-align: middle;
-}
-
-.footer-nav a {
-    color: #888;
-    text-decoration: none;
-    margin-left: 15px;
-}
-
-/* 10. RESPONSIVIDADE (PARA CELULAR) */
-@media (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+    text-align: center;
+    padding: 30px;
 }
