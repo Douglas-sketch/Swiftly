@@ -1,4 +1,124 @@
-/* GALERIA */
+/* 1. VARIÁVEIS E CONFIGURAÇÕES GERAIS */
+:root {
+    --primary: #1a365d;       /* Azul Escuro (Confiança) */
+    --accent: #adff2f;        /* Verde Limão (Destaque/Ação) */
+    --bg-light: #f0f2f5;      /* Fundo Cinza Claro */
+    --text-dark: #2d3748;     /* Cor do Texto Principal */
+    --text-light: #ffffff;    /* Cor do Texto no Fundo Escuro */
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 2. CABEÇALHO (HERO) */
+.hero-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #00126a 100%);
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-header h1 {
+    color: #ff5e5e; /* Cor de destaque para oferta */
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* 3. SEÇÃO SOBRE NÓS */
+.sobre-nos {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.texto-sobre {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 4. CARDS DE DIFERENCIAIS */
+.services-section {
+    background-color: var(--primary);
+    padding: 60px 20px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    background: white;
+    color: var(--text-dark);
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* 5. TABELA DE PREÇOS */
+.precos-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.precos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.tabela-preco {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: var(--shadow);
+    border: 1px solid #eee;
+}
+
+.tabela-preco.destaque {
+    border: 3px solid var(--accent);
+    transform: scale(1.05);
+}
+
+.valor {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* 6. GALERIA DE FOTOS */
 .galeria-section {
     padding: 60px 20px;
     text-align: center;
@@ -9,79 +129,98 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 .foto-card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
     border-radius: 10px;
-    transition: 0.3s;
 }
 
-.foto-card img:hover {
-    transform: scale(1.02);
-    filter: brightness(1.1);
-}
-
-/* DEPOIMENTOS */
-.depoimentos {
-    background-color: var(--primary);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.depoimentos-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.depoimento-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 15px;
-    max-width: 350px;
-    font-style: italic;
-}
-
-/* CONTATO */
+/* 7. FORMULÁRIO DE CONTATO */
 .contato-section {
     padding: 60px 20px;
+    background-color: #fff;
 }
 
 .contato-container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    text-align: center;
 }
 
 .form-contato {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    text-align: left;
+    margin-top: 20px;
 }
 
 .campo {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    text-align: left;
 }
 
 .campo input, .campo textarea {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: inherit;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
-.campo textarea {
-    height: 100px;
-    resize: none;
+/* 8. BOTÃO PRINCIPAL */
+.btn-primary {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* 9. RODAPÉ */
+.footer-modern {
+    background-color: #111;
+    color: #888;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    width: 120px;
+    vertical-align: middle;
+}
+
+.footer-nav a {
+    color: #888;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* 10. RESPONSIVIDADE (PARA CELULAR) */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
